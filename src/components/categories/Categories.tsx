@@ -1,7 +1,5 @@
 import CategoryCard from './CategoryCard';
-import categoryDescriptions, {
-    CategoryDescription
-} from './categoryDescriptions';
+import categoryDescriptions from './categoryDescriptions';
 import * as styles from '../../styles/categories/categories.module.sass';
 
 const Categories: React.FC = () => (

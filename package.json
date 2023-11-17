@@ -20,7 +20,6 @@
         "react-dom": "^18.2.0",
         "react-router-dom": "^6.17.0",
         "react-tsparticles": "^2.12.2",
-        "rimraf": "^5.0.5",
         "tsparticles-preset-fire": "^2.12.0"
     },
     "devDependencies": {
@@ -34,6 +33,7 @@
         "jest-environment-jsdom": "^29.7.0",
         "parcel": "^2.10.3",
         "process": "^0.11.10",
+        "rimraf": "^5.0.5",
         "ts-jest": "^29.1.1"
     }
 }
