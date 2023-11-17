@@ -1,0 +1,58 @@
+@import "../theme/theme.module.sass"
+
+#actor-cards-wrapper
+    @include flex-col-center()
+
+#actor-cards
+    display: grid
+    grid-template-columns: 1fr
+    grid-gap: 1rem
+    @include no-padding-margin()
+    max-width: 1100px
+    list-style-type: none
+
+.actor-card
+    background: url("../../../public/img/clapboard.jpg")
+    background-size: cover
+    border-radius: 0.5rem
+    padding: 1rem
+    box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.1)
+    padding-top: 3rem
+    transition: transform 0.15s ease
+
+    .actor-image
+        @include responsive-image(12rem)
+        filter: grayscale(75%)
+
+    .actor-name
+        font-family: $font-serif
+        font-size: 1.5rem
+        color: #ffe9cc
+        text-align: center
+        @include no-padding-margin()
+
+    .actor-character
+        font-family: $font-sans-serif
+        font-size: 2rem
+        color: #ffbc65
+        text-align: center
+        @include no-padding-margin()
+
+.actor-card:hover
+    background: url("../../../public/img/clapboard-hover.jpg")
+    background-size: cover
+    transform: scale(1.02)
+
+    .actor-image
+        filter: none
+
+    .actor-character
+        text-shadow: 0 0 0.5rem rgba(255, 188, 101, 0.8)
+
+@media ( min-width: $breakpoint-medium )
+    #actor-cards
+        grid-template-columns: repeat(2, 1fr)
+
+@media ( min-width: $breakpoint-large )
+    #actor-cards
+        grid-template-columns: repeat(3, 1fr)

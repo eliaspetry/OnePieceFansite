@@ -1,0 +1,26 @@
+@import "./../theme/theme.module.sass"
+
+aside
+    padding: 2rem 0
+    display: flex
+    flex-direction: column
+    align-items: center
+    @include set-gradient(right, #3d3969, #5e4460)
+
+    h2
+        color: #fff
+        font-family: $font-serif
+        font-size: 1.5rem
+        text-align: center
+        font-weight: normal
+
+#recommendations
+    display: grid
+    template-grid-columns: 1fr
+    grid-gap: 2rem
+    @include no-padding-margin()
+    list-style-type: none
+    width: 80%
+
+    a
+        @include preserve-anchor-style()

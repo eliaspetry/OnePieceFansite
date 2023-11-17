@@ -1,0 +1,82 @@
+@import "../theme/theme.module.sass"
+
+#nav-banner
+    @include flex-col-center()
+    padding: 1rem
+    text-align: center
+
+    h1, h2, h3
+        @include no-padding-margin()
+
+    a
+        @include preserve-anchor-style()
+
+    ul
+        list-style-type: none
+
+    h1
+        font-family: $font-serif
+        letter-spacing: 0.8rem
+        font-weight: black
+        font-size: 7.5rem
+        @include set-gradient(bottom, #f37335, #FDC830)
+        -webkit-background-clip: text
+        -webkit-text-fill-color: transparent
+        animation: glow 2s ease-in-out infinite
+        line-height: 1
+
+    h2
+        font-family: $font-sans-serif
+        font-weight: bold
+        font-size: 2.5rem
+        color: #ffecb8
+
+    #luffy-flag-icon
+        width: 9rem
+        height: auto
+        margin-bottom: 1rem
+
+    @keyframes glow
+        0%
+            text-shadow: 0 0 0.5rem rgba(243, 115, 53, 0.5)
+        50%
+            text-shadow: 0 0 3rem rgba(243, 115, 53, 1)
+        100%
+            text-shadow: 0 0 0.5rem rgba(243, 115, 53, 0.5)
+
+    #cards-wrapper
+        max-width: 1600px
+        background-color: rgba(20, 8, 0, 0.5)
+        background-image: url("../../../public/img/purty-wood.png")
+        border-radius: 0.5rem
+        padding: 3rem
+        margin-top: 4rem
+        box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.3)
+
+        h3
+            font-family: $font-serif
+            font-size: 3rem
+            letter-spacing: 0.2rem
+            line-height: 1.2
+            color: #f0ca99
+            text-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.5)
+
+        > p
+            font-family: $font-sans-serif
+            font-size: 1.4rem
+            color: #fff
+
+        nav
+            @include flex-col-center()
+            ul
+                display: grid
+                padding: 0
+                grid-template-columns: repeat(3, 1fr)
+                grid-gap: 2rem
+
+@media ( max-width: $breakpoint-large )
+    #nav-banner
+        #cards-wrapper
+            nav
+                ul
+                    grid-template-columns: 1fr

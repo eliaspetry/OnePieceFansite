@@ -1,0 +1,49 @@
+
+@import "./../theme/theme.module.sass"
+
+html, body, :global(#root), #layout, #layout-aside
+    @include no-padding-margin()
+    min-height: 100vh
+
+body
+    @include set-theme-background()
+
+@media (max-width: $breakpoint-small)
+    html
+        font-size: 13px /* We shrink the whole design a bit via rem relation to better adjust to mobile */
+
+#layout
+    display: grid
+    grid-template-areas: "header" "main" "footer"
+    grid-template-columns: 1fr
+    grid-template-rows: auto 1fr auto
+
+#layout-aside
+    display: grid
+    grid-template-areas: "header header" "main aside" "footer footer"
+    grid-template-columns: 3fr 1fr
+    grid-template-rows: auto 1fr auto
+
+header
+    grid-area: header
+
+main
+    grid-area: main
+    padding: 5rem 0
+
+aside
+    grid-area: aside
+    position: fixed
+    right: 0
+    overflow-y: auto
+    @include hide-scrollbars()
+
+footer
+    grid-area: footer
+
+@media ( max-width: $breakpoint-large )
+    aside
+        display: none
+
+    #layout-aside
+        grid-template-areas: "header header" "main main" "footer footer"

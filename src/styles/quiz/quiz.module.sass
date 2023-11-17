@@ -1,0 +1,71 @@
+@import "../theme/theme.module.sass"
+
+#quiz
+    @include flex-col-center()
+    margin: 1rem
+    color: #fff
+
+    #controls
+        button
+            border: none
+            font-family: $font-sans-serif
+            border-radius: 0.5rem
+            color: #fff
+            background: #6da75b
+            padding: 1rem 3rem
+            font-size: 1.2rem
+            cursor: pointer
+            transition: transform 0.15s ease
+
+        button:hover
+            box-shadow: 0 0 2rem rgba(126, 194, 113, 0.7)
+            transform: scale(1.05)
+    #score
+        p
+            font-size: 2rem
+            font-family: $font-sans-serif
+
+        #score-value
+            font-size: 2.5rem
+            color: gold
+            font-weight: bold
+            text-shadow: 0 0 1rem rgba(255, 215, 0, 0.8)
+
+    #question
+        text-align: center
+        font-family: $font-serif
+        font-size: 2rem
+
+    .ingame
+        text-shadow: 0 0 1rem rgba(255, 255, 255, 0.8)
+
+    #choices
+        display: grid
+        grid-template-columns: repeat(2, 1fr)
+        grid-gap: 1rem
+        margin-top: 1rem
+        text-align: center
+        font-size: 1.3rem
+        padding: 0
+        font-family: $font-serif
+        list-style-type: none
+
+        li
+            background: rgba(255, 255, 255, 0.2)
+            cursor: pointer
+            border-radius: 0.5rem
+            padding: 2rem
+            box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.1)
+
+        li:hover
+            background: rgba(52, 133, 209, 0.3)
+
+    #image
+        width: 100%
+        max-width: 600px
+        margin-top: 1rem
+
+@media(max-width: $breakpoint-medium)
+    #quiz
+        #choices
+            grid-template-columns: 1fr

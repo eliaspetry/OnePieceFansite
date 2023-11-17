@@ -1,0 +1,34 @@
+@import "../theme/theme.module.sass"
+
+.nav-card
+    border-radius: 0.5rem
+    @include set-gradient(bottom, #434343, #000000, #000000)
+    @include flex-col-center()
+    border: solid 2px #bddfff
+    height: 100%
+    padding: 0 1rem
+    transition: transform 0.15s ease
+
+    h4
+        font-family: $font-serif
+        font-size: 2rem
+        color: #bddfff
+        @include no-padding-margin()
+        letter-spacing: 0.1rem
+    p
+        font-family: $font-sans-serif
+        color: #fff
+        font-size: 1rem
+
+    img
+        @include responsive-image(12rem)
+        object-position: center center
+
+.nav-card:hover
+    box-shadow: 0 0 2rem rgba(253, 200, 48, 0.75)
+    border-color: #ffdf88
+    transform: scale(1.05)
+
+    h4
+        color: #ffdf88
+        text-shadow: 0 0 1rem rgba(253, 200, 48, 0.75)

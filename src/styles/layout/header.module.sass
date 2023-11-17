@@ -1,0 +1,67 @@
+@import "./../theme/theme.module.sass"
+
+#header
+    padding: 1rem
+    @include set-gradient(right, #253170, #9b574e, #9b574e)
+    box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.1)
+    display: grid
+    place-items: center
+    grid-template-areas: "nav logo"
+    grid-template-columns: 3fr 1fr
+    column-gap: 3rem
+
+    nav
+        grid-area: nav
+        width: 100%
+
+        a
+            @include preserve-anchor-style()
+
+        ul
+            list-style-type: none
+            width: 100%
+            display: flex
+            gap: 3rem
+
+            li
+                text-align: center
+                font-family: $font-serif
+                color: #f39a6d
+                font-size: 1.6rem
+
+            li:hover
+                text-shadow: 0 0 1rem rgb(243, 154, 109, 0.85)
+
+    #logo-wrapper
+        grid-area: logo
+        width: 100%
+        @include flex-col-center()
+
+    #logo
+        width: 5rem
+
+    #logo:hover
+        cursor: pointer
+        filter: drop-shadow(0 0 1rem rgba(90, 179, 236, 0.85))
+
+@media ( max-width: $breakpoint-medium )
+    #header
+        grid-template-areas: "logo" "nav"
+        grid-template-columns: 1fr
+
+        nav
+            margin-top: 1rem
+
+            ul
+                padding: 0
+                flex-direction: column
+                gap: 0.5rem
+
+                li:first-child
+                    display: none
+
+                li
+                    padding: 1rem 0
+
+                li:hover
+                    background: rgba(255, 255, 255, 0.025)

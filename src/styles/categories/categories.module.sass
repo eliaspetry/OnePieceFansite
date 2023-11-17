@@ -1,0 +1,55 @@
+@import "../theme/theme.module.sass"
+
+#categories-wrapper
+    @include flex-col-center()
+    @include hw-100-percent()
+
+#categories
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+    grid-template-rows: auto
+    grid-gap: 2rem
+    background: rgba(87, 65, 98, 0.25)
+    padding: 3rem
+    max-width: 1100px
+    border-radius: 0.5rem
+    list-style-type: none
+
+    a
+        @include preserve-anchor-style()
+
+.category
+    @include flex-col-center()
+    @include set-gradient(top, #ffc2c2, #ee6662, #ee6662)
+    border-radius: 0.5rem
+    padding: 1rem
+    box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.1)
+    cursor: pointer
+    margin: 0
+    transition: transform 0.15s ease
+
+    .category-title
+        font-size: 2rem
+        font-family: $font-serif
+        color: #fff6b4
+        text-align: center
+        margin: 0
+        text-shadow: 0 0.1rem 0.5rem rgba(0, 0, 0, 0.2)
+
+    .category-description
+        font-size: 1.3rem
+        font-family: $font-sans-serif
+        color: #fff
+        text-align: center
+        margin-bottom: 1rem
+        text-shadow: 0 0.1rem 0.5rem rgba(0, 0, 0, 0.3)
+
+    .category-image
+        @include responsive-image(15rem)
+
+    &:hover
+        transform: scale(1.05)
+
+@media ( max-width: $breakpoint-small )
+    #categories
+        grid-template-columns: 1fr

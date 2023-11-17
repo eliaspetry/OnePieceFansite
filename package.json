@@ -1,0 +1,39 @@
+{
+    "name": "one-piece",
+    "version": "1.0.0",
+    "description": "A fansite about the Netflix live action",
+    "browserslist": "> 0.5%, last 2 versions, not dead",
+    "scripts": {
+        "clean": "rimraf dist .parcel-cache",
+        "start": "npm run clean && parcel index.html",
+        "test": "jest",
+        "build": "npm run clean && parcel build index.html"
+    },
+    "keywords": [],
+    "author": "Elias Petry",
+    "license": "ISC",
+    "dependencies": {
+        "@fontsource/eczar": "^5.0.17",
+        "@fontsource/open-sans": "^5.0.17",
+        "@parcel/transformer-raw": "^2.10.3",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0",
+        "react-router-dom": "^6.17.0",
+        "react-tsparticles": "^2.12.2",
+        "rimraf": "^5.0.5",
+        "tsparticles-preset-fire": "^2.12.0"
+    },
+    "devDependencies": {
+        "@parcel/transformer-sass": "^2.10.3",
+        "@testing-library/jest-dom": "^6.1.4",
+        "@testing-library/react": "^14.0.0",
+        "@types/jest": "^29.5.7",
+        "@types/react": "^18.2.37",
+        "@types/react-dom": "^18.2.15",
+        "jest": "^29.7.0",
+        "jest-environment-jsdom": "^29.7.0",
+        "parcel": "^2.10.3",
+        "process": "^0.11.10",
+        "ts-jest": "^29.1.1"
+    }
+}

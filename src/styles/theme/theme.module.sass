@@ -1,0 +1,62 @@
+@import "./../../../node_modules/@fontsource/eczar/index.css"
+@import "./../../../node_modules/@fontsource/open-sans/index.css"
+
+/* Fonts */
+$font-serif: 'Eczar', serif
+$font-sans-serif: 'Open Sans', sans-serif
+
+/* Colors and Backgrounds */
+@mixin set-gradient($direction, $start_color, $end_color, $fallback_color: $start_color)
+    background: $fallback_color
+    background: -webkit-linear-gradient(to $direction, $start_color, $end_color)
+    background: linear-gradient(to $direction, $start_color, $end_color)
+
+@mixin set-theme-background()
+    @include set-gradient(top, #2a5298, #1e3c72, #1e3c72)
+
+.texture-background
+    background-image: url("./../../../public/img/graphy-dark.png")
+
+.wanted-background
+    background: url("../../../public/img/category-background.jpg")
+    background-size: cover
+
+/* Browser behavior overrides */
+@mixin preserve-anchor-style()
+    color: inherit
+    text-decoration: none
+
+@mixin hide-scrollbars()
+    /* Firefox, Safari, IE */
+    -ms-overflow-style: none
+    scrollbar-width: none
+
+    /* Chrome */
+    &::-webkit-scrollbar
+        display: none
+
+/* Breakpoints */
+$breakpoint-small: 576px
+$breakpoint-medium: 768px
+$breakpoint-large: 992px
+$breakpoint-xlarge: 1200px
+
+/* Layout */
+@mixin flex-col-center()
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+
+@mixin responsive-image($height)
+    width: 100%
+    height: $height
+    object-fit: cover
+
+@mixin no-padding-margin
+    padding: 0
+    margin: 0
+
+@mixin hw-100-percent
+    height: 100%
+    width: 100%
