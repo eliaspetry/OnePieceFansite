@@ -1,5 +1,4 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import theme from '../styles/theme/theme.module.sass';
 
 // Route layouts
 import Home from './layout/home/Home';
