@@ -32,19 +32,31 @@
             li:hover
                 text-shadow: 0 0 1rem rgb(243, 154, 109, 0.85)
 
-    #logo-wrapper
+    #logo-wrapper a
         grid-area: logo
         width: 100%
-        @include flex-col-center()
+        display: flex
+        flex-direction: row-reverse
+        justify-content: center
+        align-items: center
+        gap: 1.5rem
 
     #logo
         width: 5rem
+
+    #text-logo
+        width: 18rem
+        filter: drop-shadow(0 0.15rem 0 rgba(0, 0, 0, 0.2))
 
     #logo:hover
         cursor: pointer
         filter: drop-shadow(0 0 1rem rgba(90, 179, 236, 0.85))
 
-@media ( max-width: $breakpoint-medium )
+    #text-logo:hover
+        cursor: pointer
+        filter: drop-shadow(0 0 1rem rgba(240, 202, 153, 0.8))
+
+@media ( max-width: 1050px) /* Custom medium-size two-row stack to avoid text logo causing scroll behaviour */
     #header
         grid-template-areas: "logo" "nav"
         grid-template-columns: 1fr
@@ -54,14 +66,32 @@
 
             ul
                 padding: 0
-                flex-direction: column
-                gap: 0.5rem
+                gap: 3rem
+                justify-content: center
 
-                li:first-child
-                    display: none
+        #text-logo
+            width: 22rem
+            filter: drop-shadow(0 0.15rem 0 rgba(0, 0, 0, 0.2))
+
+@media (max-width: $breakpoint-small)
+    #header
+        nav
+            ul
+                gap: 0.5rem
+                flex-direction: column
 
                 li
                     padding: 1rem 0
 
                 li:hover
                     background: rgba(255, 255, 255, 0.025)
+
+                li:first-child
+                    display: none
+
+        #logo-wrapper a
+            flex-direction: column
+
+        #text-logo
+            width: 27rem
+            filter: drop-shadow(0 0.2rem 0 rgba(0, 0, 0, 0.2))
