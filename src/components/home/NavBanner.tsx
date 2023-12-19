@@ -1,5 +1,6 @@
 import luffyFlagIcon from '../../../public/img/luffy-flag.png';
 import NavCard, { NavCardProps } from './NavCard';
+import Divider from './Divider';
 import * as styles from '../../styles/home/nav-banner.module.sass';
 
 interface NavBannerProps {
@@ -18,6 +19,7 @@ const NavBanner: React.FC<NavBannerProps> = ({ navCards }) => (
                 alt="luffy flag icon"
             />
             <h3>¡Súbete a bordo!</h3>
+            <Divider />
             <p>
                 Curiosidades y minijuegos sobre el estreno del live-action para
                 que no te quedes en tierra:
