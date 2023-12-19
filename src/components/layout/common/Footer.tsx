@@ -24,7 +24,7 @@ const Footer: React.FC = () => (
         <img id={styles['text-logo']} src={textLogo} alt="logotipo de texto" />
         <p>
             &copy; {new Date().getFullYear()} Elias Petry | UOC - Asignatura:
-            Herramientas HTML y CSS I [PEC 1]
+            Herramientas HTML y CSS I [PEC 2]
         </p>
         <div id={styles['links-wrapper']}>
             <LinkContainer name="Rutas" routes={routes} />

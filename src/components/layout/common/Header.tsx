@@ -9,7 +9,7 @@ const Header: React.FC = () => (
         <nav>
             <ul>
                 {routes.map(({ name, route }: Route) => (
-                    <li>
+                    <li key={name}>
                         <Link to={route}>{name}</Link>
                     </li>
                 ))}
