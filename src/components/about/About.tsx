@@ -1,5 +1,9 @@
 import Article, { Section } from '../layout/common/Article';
 import luffyBaratie from '../../../public/img/luffy-baratie.jpg';
+import strawhat from '../../../public/img/strawhat.svg';
+import * as styles from '../../styles/about/strawhat-animation.module.sass';
+
+// For the "flying strawhat scene", we'll go with a CSS-only animation for now (canvas is overkill).
 
 const About: React.FC = () => (
     <Article title="Presentación del sitio">
@@ -20,6 +24,15 @@ const About: React.FC = () => (
                 1000 capítulos publicados y más de 500 millones de copias
                 vendidas en todo el mundo.
             </p>
+            <div id={styles['animation-container']}>
+                <div id={styles['animation-scene']}>
+                    <img
+                        id={styles.strawhat}
+                        src={strawhat}
+                        alt="sombrero de Luffy"
+                    />
+                </div>
+            </div>
         </Section>
         <Section title="¿Qué es el live-action sobre One Piece de Netflix?">
             <p>
