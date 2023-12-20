@@ -1,14 +1,36 @@
 import Article, { Section } from '../layout/common/Article';
-import luffyBaratie from '../../../public/img/luffy-baratie.jpg';
 import strawhat from '../../../public/img/strawhat.svg';
 import * as styles from '../../styles/about/strawhat-animation.module.sass';
 
-// For the "flying strawhat scene", we'll go with a CSS-only animation for now (canvas is overkill).
+/**
+ * Picture imports utilizing Parcel's Sharp plugin for optimization (assignment requires at least one use case)
+ */
+//@ts-ignore
+import luffyBaratieSm from '../../../public/img/luffy-baratie.jpg?width=576';
+//@ts-ignore
+import luffyBaratieMd from '../../../public/img/luffy-baratie.jpg?width=768';
+
+import luffyBaratieLg from '../../../public/img/luffy-baratie.jpg';
+
+// Also, for the "flying strawhat scene", we'll go with a CSS-only animation for now (canvas is overkill).
 
 const About: React.FC = () => (
     <Article title="Presentación del sitio">
         <figure>
-            <img src={luffyBaratie} alt="luffy en baratie" />
+            <picture>
+                <source
+                    srcSet={luffyBaratieSm}
+                    media="(max-width: 576px)"
+                    type="image/jpeg"
+                />
+                <source
+                    srcSet={luffyBaratieMd}
+                    media="(max-width: 768px)"
+                    type="image/jpeg"
+                />
+                <source srcSet={luffyBaratieLg} type="image/jpeg" />
+                <img src={luffyBaratieLg} alt="Luffy en Baratie" />
+            </picture>
             <figcaption>Luffy en Baratie. Fuente: Netflix.</figcaption>
         </figure>
         <Section title="¿Qué es One Piece?">
@@ -89,7 +111,6 @@ const About: React.FC = () => (
                     Desglose de recursos utilizados y citas / atribuciones de
                     copyright en el marco del fair-use.
                 </dd>
-                <dt></dt>
             </dl>
         </Section>
     </Article>

@@ -24,9 +24,11 @@ const routes: Route[] = [
     }
 ];
 
-const categoryRoutes: Route[] = categoryDescriptions.map(category => ({
-    name: category.title,
-    route: category.route
-}));
+const categoryRoutes: Route[] = Object.values(categoryDescriptions).map(
+    category => ({
+        name: category.title,
+        route: category.route
+    })
+);
 
 export { routes, categoryRoutes };
