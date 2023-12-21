@@ -100,6 +100,11 @@ export const packages: Resource[] = [
     {
         description: 'Jest. (s.f.). Delightful JavaScript Testing.',
         url: 'https://jestjs.io/'
+    },
+    {
+        description:
+            '@axe/core, Dequelabs. (s.f.). Browser A11y accesibility testing for React components and applications.',
+        url: 'https://www.npmjs.com/package/@axe-core/react'
     }
 ];
 
