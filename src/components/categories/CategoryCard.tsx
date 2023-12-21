@@ -16,7 +16,7 @@ const CategoryCard: React.FC<CategoryCardProps> = ({
 }) => (
     <Link to={route} key={title}>
         <div className={styles.category}>
-            <h2 className={styles['category-title']}>{title}</h2>
+            <h1 className={styles['category-title']}>{title}</h1>
             <p className={styles['category-description']}>{description}</p>
             <img className={styles['category-image']} src={image} alt={title} />
         </div>

@@ -23,6 +23,7 @@
         "tsparticles-preset-fire": "^2.12.0"
     },
     "devDependencies": {
+        "@axe-core/react": "^4.8.2",
         "@parcel/transformer-sass": "^2.10.3",
         "@testing-library/jest-dom": "^6.1.4",
         "@testing-library/react": "^14.0.0",
@@ -34,6 +35,7 @@
         "parcel": "^2.10.3",
         "process": "^0.11.10",
         "rimraf": "^5.0.5",
+        "sharp": "^0.31.3",
         "ts-jest": "^29.1.1"
     }
 }

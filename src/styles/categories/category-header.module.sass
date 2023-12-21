@@ -1,0 +1,43 @@
+@import "../theme/theme.module.sass"
+
+#category-header
+    height: 20rem
+    width: 100%
+    margin-bottom: 3rem
+    #category-backdrop
+        position: relative
+        height: 100%
+        width: 100%
+        overflow: hidden
+        img
+            height: 100%
+            width: 100%
+            max-width: 100%
+            object-fit: cover
+            object-position: top
+    #category-info
+        position: absolute
+        height: 100%
+        width: 100%
+        background-color: rgba(0, 0, 0, 0.5)
+        background-image: url("./../../../public/img/lined-paper.png")
+        top: 0
+        left: 0
+        color: white
+        font-size: 1.5rem
+        @include flex-col-center()
+        h1, p
+            padding: 1rem
+            text-align: center
+            margin: 0
+
+        h1
+            font-family: $font-serif
+            color: rgb(255, 246, 180)
+            text-shadow: rgba(255, 246, 180, 0.8) 0px 0px 1.5rem
+            font-weight: normal
+            font-size: 3.5rem
+
+        p
+            font-family: $font-sans-serif
+            font-size: 1.5rem

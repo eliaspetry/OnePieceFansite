@@ -1,16 +1,42 @@
 import Article, { Section } from '../layout/common/Article';
-import luffyBaratie from '../../../public/img/luffy-baratie.jpg';
+import strawhat from '../../../public/img/strawhat.svg';
+import * as styles from '../../styles/about/strawhat-animation.module.sass';
+
+/**
+ * Picture imports utilizing Parcel's Sharp plugin for optimization (assignment requires at least one use case)
+ */
+//@ts-ignore
+import luffyBaratieSm from '../../../public/img/luffy-baratie.jpg?width=576';
+//@ts-ignore
+import luffyBaratieMd from '../../../public/img/luffy-baratie.jpg?width=768';
+
+import luffyBaratieLg from '../../../public/img/luffy-baratie.jpg';
+
+// Also, for the "flying strawhat scene", we'll go with a CSS-only animation for now (canvas is overkill).
 
 const About: React.FC = () => (
     <Article title="Presentación del sitio">
         <figure>
-            <img src={luffyBaratie} alt="luffy en baratie" />
+            <picture>
+                <source
+                    srcSet={luffyBaratieSm}
+                    media="(max-width: 576px)"
+                    type="image/jpeg"
+                />
+                <source
+                    srcSet={luffyBaratieMd}
+                    media="(max-width: 768px)"
+                    type="image/jpeg"
+                />
+                <source srcSet={luffyBaratieLg} type="image/jpeg" />
+                <img src={luffyBaratieLg} alt="Luffy en Baratie" />
+            </picture>
             <figcaption>Luffy en Baratie. Fuente: Netflix.</figcaption>
         </figure>
         <Section title="¿Qué es One Piece?">
             <p>
                 One Piece es un manga y anime de género
-                <span lang="jp"> shōnen</span> creado por Eiichiro Oda. La
+                <span lang="ja"> shōnen</span> creado por Eiichiro Oda. La
                 historia narra las aventuras de Monkey D. Luffy, un joven que
                 desea convertirse en el Rey de los Piratas y encontrar el
                 legendario tesoro homónimo escondido en el océano más peligroso
@@ -20,6 +46,15 @@ const About: React.FC = () => (
                 1000 capítulos publicados y más de 500 millones de copias
                 vendidas en todo el mundo.
             </p>
+            <div id={styles['animation-container']}>
+                <div id={styles['animation-scene']}>
+                    <img
+                        id={styles.strawhat}
+                        src={strawhat}
+                        alt="sombrero de Luffy"
+                    />
+                </div>
+            </div>
         </Section>
         <Section title="¿Qué es el live-action sobre One Piece de Netflix?">
             <p>
@@ -76,7 +111,6 @@ const About: React.FC = () => (
                     Desglose de recursos utilizados y citas / atribuciones de
                     copyright en el marco del fair-use.
                 </dd>
-                <dt></dt>
             </dl>
         </Section>
     </Article>

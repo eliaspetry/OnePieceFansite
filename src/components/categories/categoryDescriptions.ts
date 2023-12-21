@@ -8,21 +8,25 @@ export interface CategoryDescription {
     image: string;
 }
 
-const categoryDescriptions: CategoryDescription[] = [
-    {
+export type CategoryDescriptions = {
+    [key in keyof any]: CategoryDescription;
+};
+
+const categoryDescriptions: CategoryDescriptions = {
+    quiz: {
         title: 'Quiz',
         description:
             'Pon a prueba tus conocimientos sobre el reparto y los personajes.',
         route: '/quiz',
         image: zorroCombat
     },
-    {
+    episodes: {
         title: 'Episodios',
         description:
             'Conoce a los actores y episodios de la primera temporada de la serie.',
         route: '/episodes',
         image: charactersSideBySide
     }
-];
+};
 
 export default categoryDescriptions;

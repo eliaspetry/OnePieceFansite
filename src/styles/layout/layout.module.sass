@@ -4,6 +4,7 @@
 html, body, :global(#root), #layout, #layout-aside
     @include no-padding-margin()
     min-height: 100vh
+    min-width: 375px /* Minimum reasonable mobile width: do not shrink further / rather force scroll below that point */
 
 body
     @include set-theme-background()

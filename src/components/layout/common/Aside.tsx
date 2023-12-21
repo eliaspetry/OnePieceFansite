@@ -16,7 +16,7 @@ const Aside: React.FC = () => {
      */
     function _chooseRecommendations(count: number): CategoryDescription[] {
         const picked = [],
-            pool = [...categoryDescriptions];
+            pool = [...Object.values(categoryDescriptions)];
 
         while (picked.length < count && pool.length) {
             const index = Math.floor(Math.random() * pool.length);

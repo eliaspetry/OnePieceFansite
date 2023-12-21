@@ -1,0 +1,48 @@
+@import "../theme/theme.module.sass"
+
+/* Animation and scaling variables */
+$scene-height: 15rem
+$scene-width: $scene-height * 1.66
+$strawhat-height: $scene-height * 0.25
+$flip-height: $scene-height * 0.95 - $strawhat-height
+$animation-duration: 3s
+
+#animation-container
+    @include flex-col-center()
+
+#animation-scene
+    position: relative
+    height: $scene-height
+    width: $scene-width
+    background: url("../../../public/img/treasure-island-background.jpg")
+    background-size: cover
+    background-repeat: no-repeat
+    background-position: center
+    border-radius: 0.3rem
+
+    #strawhat
+        position: absolute
+        height: $strawhat-height
+        width: $strawhat-height
+        left: 45.75%
+        animation: strawhatFlip $animation-duration linear infinite
+
+@keyframes strawhatFlip
+    0%
+        transform: rotateZ(0deg)
+        bottom: 0
+    15%
+        transform: rotateZ(90deg)
+        bottom: calc($flip-height / 2)
+    30%
+        transform: rotateZ(180deg)
+        bottom: calc($flip-height)
+    45%
+        transform: rotateZ(270deg)
+        bottom: calc($flip-height / 2)
+    60%
+        transform: rotateZ(360deg)
+        bottom: 0
+    100% /* Remaining percentage is the hat resting on the ground after spin trajectory completion */
+        transform: rotateZ(360deg)
+        bottom: 0
