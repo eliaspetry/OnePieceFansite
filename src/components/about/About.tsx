@@ -36,7 +36,7 @@ const About: React.FC = () => (
         <Section title="¿Qué es One Piece?">
             <p>
                 One Piece es un manga y anime de género
-                <span lang="jp"> shōnen</span> creado por Eiichiro Oda. La
+                <span lang="ja"> shōnen</span> creado por Eiichiro Oda. La
                 historia narra las aventuras de Monkey D. Luffy, un joven que
                 desea convertirse en el Rey de los Piratas y encontrar el
                 legendario tesoro homónimo escondido en el océano más peligroso
