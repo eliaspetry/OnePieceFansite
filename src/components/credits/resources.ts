@@ -46,6 +46,26 @@ export const visuals: Resource[] = [
         description:
             'Transparent Textures. (s.f.). Free to use texture patterns.',
         url: 'https://www.transparenttextures.com/'
+    },
+    {
+        description:
+            'Font Meme. (s.f.). One Piece Manga Font and Preview Editor.',
+        url: 'https://fontmeme.com/fonts/one-piece-manga-font/'
+    },
+    {
+        description:
+            'Flaticon. (s.f.). Access 12.8M+ vector icons & stickers. Strawhat.',
+        url: 'https://www.flaticon.es/icono-gratis/sombrero-de-copa_7101344'
+    },
+    {
+        description:
+            'Freepik. (s.f.). Design more and faster. Decorative ropes.',
+        url: 'https://www.freepik.es/vector-gratis/conjunto-decorativo-cuerdas_3947825.html'
+    },
+    {
+        description:
+            'Bing (2023). Fondo de una isla inspirada en el anime One Piece (modo creativo, imagen generada mediante DALL·E 3).',
+        url: 'https://bing.com/chat'
     }
 ];
 
