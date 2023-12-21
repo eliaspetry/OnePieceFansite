@@ -1,6 +1,7 @@
 import * as styles from '../../../styles/layout/footer.module.sass';
 import textLogo from '../../../../public/img/text-logo.png';
 import { routes, categoryRoutes, Route } from './routes';
+import { Link } from 'react-router-dom';
 
 interface LinkContainerProps {
     name: string;
@@ -13,7 +14,7 @@ const LinkContainer: React.FC<LinkContainerProps> = ({ name, routes }) => (
         <ul>
             {routes.map(({ name, route }) => (
                 <li key={name}>
-                    <a href={route}>{name}</a>
+                    <Link to={route}>{name}</Link>
                 </li>
             ))}
         </ul>
