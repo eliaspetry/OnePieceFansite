@@ -3,6 +3,7 @@ import Article, { Section } from '../layout/common/Article';
 import cast, { Actor } from '../quiz/cast';
 import summaries, { Summary } from '../episodes/summaries';
 import * as styles from '../../styles/episodes/episodes.module.sass';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 const Episodes: React.FC = () => (
     <Article title="Episodios y reparto">
@@ -15,7 +16,7 @@ const Episodes: React.FC = () => (
                 <ul id={styles['actor-cards']}>
                     {cast.map(({ realName, characterName, image }: Actor) => (
                         <li className={styles['actor-card']} key={realName}>
-                            <img
+                            <LazyLoadImage
                                 className={styles['actor-image']}
                                 src={image}
                                 alt={`${realName} haciendo el papel de ${characterName}`}

@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import * as styles from '../../styles/categories/categories.module.sass';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 export interface CategoryCardProps {
     route: string;
@@ -18,7 +19,7 @@ const CategoryCard: React.FC<CategoryCardProps> = ({
         <div className={styles.category}>
             <h1 className={styles['category-title']}>{title}</h1>
             <p className={styles['category-description']}>{description}</p>
-            <img className={styles['category-image']} src={image} alt={title} />
+            <LazyLoadImage className={styles['category-image']} src={image} alt={title} />
         </div>
     </Link>
 );

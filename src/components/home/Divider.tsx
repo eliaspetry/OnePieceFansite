@@ -1,5 +1,6 @@
 import * as styles from './../../styles/home/clip-path-divider.module.sass';
 import rawDividerImage from '../../../public/img/rope-divider.jpg';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 // We are only using a rough, improvised clip-path cutout here to comply with the assignment, since the requirements state that it should showcase at least one use case
 // This image would normally be inserted with an already transparent background as PNG
@@ -15,7 +16,7 @@ const Divider: React.FC = () => (
             </clipPath>
         </svg>
 
-        <img
+        <LazyLoadImage
             id={styles.divider}
             src={rawDividerImage}
             alt=""
