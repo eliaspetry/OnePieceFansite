@@ -6,11 +6,11 @@ import * as styles from '../../styles/about/strawhat-animation.module.sass';
  * Picture imports utilizing Parcel's Sharp plugin for optimization (assignment requires at least one use case)
  */
 //@ts-ignore
-import luffyBaratieSm from '../../../public/img/luffy-baratie.jpg?width=576';
+import luffyBaratieSm from '../../../public/img/luffy-baratie.jpg?as=webp&width=576';
 //@ts-ignore
-import luffyBaratieMd from '../../../public/img/luffy-baratie.jpg?width=768';
-
-import luffyBaratieLg from '../../../public/img/luffy-baratie.jpg';
+import luffyBaratieMd from '../../../public/img/luffy-baratie.jpg?as=webp&width=768';
+//@ts-ignore
+import luffyBaratieLg from '../../../public/img/luffy-baratie.jpg?as=webp&width=1000';
 
 // Also, for the "flying strawhat scene", we'll go with a CSS-only animation for now (canvas is overkill).
 

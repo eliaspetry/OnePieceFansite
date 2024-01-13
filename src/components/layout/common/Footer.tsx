@@ -1,5 +1,5 @@
 import * as styles from '../../../styles/layout/footer.module.sass';
-import textLogo from '../../../../public/img/text-logo.png';
+import textLogo from '../../../../public/img/text-logo.png?as=avif';
 import { routes, categoryRoutes, Route } from './routes';
 import { Link } from 'react-router-dom';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
@@ -23,7 +23,11 @@ const LinkContainer: React.FC<LinkContainerProps> = ({ name, routes }) => (
 );
 const Footer: React.FC = () => (
     <div id={styles.footer}>
-        <LazyLoadImage id={styles['text-logo']} src={textLogo} alt="logotipo de texto" />
+        <LazyLoadImage
+            id={styles['text-logo']}
+            src={textLogo}
+            alt="logotipo de texto"
+        />
         <p>
             &copy; {new Date().getFullYear()} Elias Petry | UOC - Asignatura:
             Herramientas HTML y CSS I [PEC 2]

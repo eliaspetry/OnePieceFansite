@@ -1,5 +1,5 @@
 import * as styles from './../../styles/home/clip-path-divider.module.sass';
-import rawDividerImage from '../../../public/img/rope-divider.jpg';
+import rawDividerImage from '../../../public/img/rope-divider.jpg?as=webp';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 // We are only using a rough, improvised clip-path cutout here to comply with the assignment, since the requirements state that it should showcase at least one use case
