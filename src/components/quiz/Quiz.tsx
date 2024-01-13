@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import QuizEngine, { Question } from './quizEngine';
 import cast from './cast';
 import * as styles from '../../styles/quiz/quiz.module.sass';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 const Quiz: React.FC = () => {
     const [quizEngine, setQuizEngine] = useState<QuizEngine>(
@@ -82,7 +83,7 @@ const Quiz: React.FC = () => {
                     ))}
                 </ul>
                 {activeQuestion?.image && (
-                    <img
+                    <LazyLoadImage
                         id={styles.image}
                         data-testid="image"
                         src={activeQuestion.image}

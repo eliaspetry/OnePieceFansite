@@ -1,8 +1,10 @@
 import Layout from '../Layout';
-import QuizBoard from './../../quiz/Quiz';
 import CategoryHeader from '../../categories/CategoryHeader';
 import categoryDescriptions from '../../categories/categoryDescriptions';
 import * as styles from '../../../styles/theme/theme.module.sass';
+import { lazy, Suspense } from 'react';
+
+const QuizBoard: React.FC = lazy(() => import('./../../quiz/Quiz'));
 
 const Quiz: React.FC = () => (
     <Layout
@@ -13,7 +15,9 @@ const Quiz: React.FC = () => (
                 <CategoryHeader
                     categoryDescription={categoryDescriptions['quiz']}
                 />
-                <QuizBoard />
+                <Suspense>
+                    <QuizBoard />
+                </Suspense>
             </>
         }
     />

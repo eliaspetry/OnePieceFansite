@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import * as styles from '../../styles/home/nav-card.module.sass';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 export interface NavCardProps {
     thumbnail: string;
@@ -19,7 +20,7 @@ const NavCard: React.FC<NavCardProps> = ({
     <Link to={route}>
         <div className={styles['nav-card']}>
             <h4>{title}</h4>
-            <img src={thumbnail} alt={thumbnailAlt} />
+            <LazyLoadImage src={thumbnail} alt={thumbnailAlt} />
             <p>{description}</p>
         </div>
     </Link>

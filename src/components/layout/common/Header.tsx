@@ -3,6 +3,7 @@ import luffyFlag from '../../../../public/img/luffy-flag.png';
 import textLogo from '../../../../public/img/text-logo.png';
 import { routes, Route } from './routes';
 import * as styles from '../../../styles/layout/header.module.sass';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 const Header: React.FC = () => (
     <div id={styles.header}>
@@ -17,8 +18,8 @@ const Header: React.FC = () => (
         </nav>
         <div id={styles['logo-wrapper']}>
             <Link to="/">
-                <img id={styles.logo} src={luffyFlag} alt="logo" />
-                <img
+                <LazyLoadImage id={styles.logo} src={luffyFlag} alt="logo" />
+                <LazyLoadImage
                     id={styles['text-logo']}
                     src={textLogo}
                     alt="logotipo de texto"
