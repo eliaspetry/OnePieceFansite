@@ -1,7 +1,10 @@
 import { NavCardProps } from './NavCard';
-import onePieceThumbnail1 from './../../../public/img/one-piece-thumbnail-1.jpg';
-import onePieceThumbnail2 from './../../../public/img/one-piece-thumbnail-2.jpg';
-import onePieceThumbnail3 from './../../../public/img/one-piece-thumbnail-3.jpg';
+//@ts-ignore
+import onePieceThumbnail1 from './../../../public/img/one-piece-thumbnail-1.jpg?as=webp&width=800';
+//@ts-ignore
+import onePieceThumbnail2 from './../../../public/img/one-piece-thumbnail-2.jpg?as=webp&width=800';
+//@ts-ignore
+import onePieceThumbnail3 from './../../../public/img/one-piece-thumbnail-3.jpg?as=webp&width=800';
 
 export const cards: NavCardProps[] = [
     {

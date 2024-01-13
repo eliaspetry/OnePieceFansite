@@ -1,4 +1,4 @@
-import luffyFlagIcon from '../../../public/img/luffy-flag.png';
+import luffyFlagIcon from '../../../public/img/luffy-flag.png?as=avif';
 import NavCard, { NavCardProps } from './NavCard';
 import Divider from './Divider';
 import * as styles from '../../styles/home/nav-banner.module.sass';

@@ -5,19 +5,23 @@ export interface Actor {
 }
 
 /* Cast image imports */
-import luffy from './../../../public/img/quiz/luffy.jpg';
-import zoro from './../../../public/img/quiz/zoro.jpg';
-import nami from './../../../public/img/quiz/nami.jpg';
-import usopp from './../../../public/img/quiz/usopp.jpg';
-import sanji from './../../../public/img/quiz/sanji.jpg';
-import garp from './../../../public/img/quiz/garp.jpg';
-import koby from './../../../public/img/quiz/koby.jpg';
-import arlong from './../../../public/img/quiz/arlong.jpg';
-import buggy from './../../../public/img/quiz/buggy.jpg';
-import mihawk from './../../../public/img/quiz/mihawk.jpg';
-import kuro from './../../../public/img/quiz/kuro.jpg';
-import kaya from './../../../public/img/quiz/kaya.jpg';
-import shanks from './../../../public/img/quiz/shanks.jpg';
+import luffy from './../../../public/img/quiz/luffy.jpg?as=webp';
+import zoro from './../../../public/img/quiz/zoro.jpg?as=webp';
+import nami from './../../../public/img/quiz/nami.jpg?as=webp';
+import usopp from './../../../public/img/quiz/usopp.jpg?as=webp';
+import sanji from './../../../public/img/quiz/sanji.jpg?as=webp';
+//@ts-ignore
+import garp from './../../../public/img/quiz/garp.jpg?as=webp&width=800';
+import koby from './../../../public/img/quiz/koby.jpg?as=webp';
+//@ts-ignore
+import arlong from './../../../public/img/quiz/arlong.jpg?as=webp&width=800';
+import buggy from './../../../public/img/quiz/buggy.jpg?as=webp';
+//@ts-ignore
+import mihawk from './../../../public/img/quiz/mihawk.jpg?as=webp&width=800';
+import kuro from './../../../public/img/quiz/kuro.jpg?as=webp';
+import kaya from './../../../public/img/quiz/kaya.jpg?as=webp';
+//@ts-ignore
+import shanks from './../../../public/img/quiz/shanks.jpg?as=webp&width=800';
 
 const cast: Actor[] = [
     {

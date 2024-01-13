@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
-import luffyFlag from '../../../../public/img/luffy-flag.png';
-import textLogo from '../../../../public/img/text-logo.png';
+import luffyFlag from '../../../../public/img/luffy-flag.png?as=avif';
+import textLogo from '../../../../public/img/text-logo.png?as=avif';
 import { routes, Route } from './routes';
 import * as styles from '../../../styles/layout/header.module.sass';
 import { LazyLoadImage } from 'react-lazy-load-image-component';

@@ -1,5 +1,7 @@
-import zorroCombat from '../../../public/img/one-piece-zorro-combat.jpg';
-import charactersSideBySide from '../../../public/img/one-piece-characters-side-by-side.jpg';
+import zorroCombat from '../../../public/img/one-piece-zorro-combat.jpg?as=webp';
+
+//@ts-ignore
+import charactersSideBySide from '../../../public/img/one-piece-characters-side-by-side.jpg?as=webp&width=1000';
 
 export interface CategoryDescription {
     title: string;

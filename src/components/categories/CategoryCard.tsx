@@ -19,7 +19,11 @@ const CategoryCard: React.FC<CategoryCardProps> = ({
         <div className={styles.category}>
             <h1 className={styles['category-title']}>{title}</h1>
             <p className={styles['category-description']}>{description}</p>
-            <LazyLoadImage className={styles['category-image']} src={image} alt={title} />
+            <LazyLoadImage
+                className={styles['category-image']}
+                src={image}
+                alt={title}
+            />
         </div>
     </Link>
 );
