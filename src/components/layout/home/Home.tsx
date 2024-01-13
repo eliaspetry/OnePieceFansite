@@ -1,9 +1,17 @@
 import Layout from '../Layout';
-import VideoBackground from '../../home/VideoBackground';
 import NavBanner from '../../home/NavBanner';
-import Particles from '../../home/Particles';
 import onePieceTrailer from './../../../../public/video/one-piece-trailer.mp4';
 import { cards } from '../../home/cards';
+import { lazy, Suspense } from 'react';
+import { ParticlesProps } from '../../home/Particles';
+import { VideoBackgroundProps } from '../../home/VideoBackground';
+
+const Particles: React.FC<ParticlesProps> = lazy(
+        () => import('../../home/Particles')
+    ),
+    VideoBackground: React.FC<VideoBackgroundProps> = lazy(
+        () => import('../../home/VideoBackground')
+    );
 
 const Content: React.FC = () => {
     const particleOptions = {
@@ -20,9 +28,13 @@ const Content: React.FC = () => {
 
     return (
         <>
-            <VideoBackground video={onePieceTrailer} />
+            <Suspense>
+                <VideoBackground video={onePieceTrailer} />
+            </Suspense>
             <NavBanner navCards={cards} />
-            <Particles options={particleOptions} />
+            <Suspense>
+                <Particles options={particleOptions} />
+            </Suspense>
         </>
     );
 };
